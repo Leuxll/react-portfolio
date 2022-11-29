@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+# sanity node module
+/sanity/node_modules
+
 # production
 /build
 
