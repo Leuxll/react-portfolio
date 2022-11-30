@@ -4,6 +4,7 @@ import BackgroundShapes from './BackgroundShapes';
 import { motion } from 'framer-motion';
 import { PageInfo } from '../typings';
 import { urlFor } from '../sanity';
+import Image from 'next/image';
 
 type Props = {
     pageInfo: PageInfo
@@ -44,7 +45,7 @@ export default function Hero({ pageInfo }: Props) {
             Home
             </motion.h3>
             <BackgroundShapes />
-            <img 
+            <img
                 src={urlFor(pageInfo?.profilePic).url() || ''}
                 alt="Picture of Author"
                 className="rounded-full relative h-32 w-32 object-cover mx-auto"/>
