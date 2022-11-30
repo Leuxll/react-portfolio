@@ -51,7 +51,7 @@ export default function Contact({}: Props) {
             <div>
                 <div className='flex items-center space-x-5 justify-center'>
                     <PhoneIcon className='h-7 w-7 text-pink-500 animate-pulse'/>
-                    <p className='text-white text-2xl font-semibold'>+1 (123) 456-7890</p>
+                    <p className='text-white text-2xl font-semibold'>+1 (437) 993-3058</p>
                 </div>
                 <div className='flex items-center space-x-5 justify-center'>
                     <EnvelopeIcon className='h-7 w-7 text-pink-500 animate-pulse'/>
