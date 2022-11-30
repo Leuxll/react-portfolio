@@ -20,9 +20,22 @@ export default function Projects({ projects }: Props) {
         duration: 1,
       }}
       className='h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0'>
-      <h3 className='absolute top-16 uppercase tracking-[20px] text-white text-xl'>
+      <motion.h3 
+      className='absolute top-16 uppercase tracking-[20px] text-white text-xl'
+      initial={{
+        opacity: 0,
+        y: -50,
+      }}
+      whileInView={{
+          opacity: 1,
+          y: 0,
+      }}
+      transition={{
+          duration: 1.2,
+      }}
+      viewport={{once: true}}>
         Projects
-      </h3>
+      </motion.h3>
       <div className='w-screen flex space-x-10 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar'>
             {projects?.map((project => (
               <ProjectCard key={project._id} project={project} />

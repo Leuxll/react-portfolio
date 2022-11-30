@@ -1,6 +1,7 @@
 import React from 'react'
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/solid'
 import { useForm, SubmitHandler } from 'react-hook-form'
+import { motion } from 'framer-motion'
 
 type Props = {}
 
@@ -26,9 +27,22 @@ export default function Contact({}: Props) {
 
   return (
     <div className=' h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
-        <h3 className='absolute top-16 uppercase tracking-[20px] text-white text-xl'>
+        <motion.h3 
+        className='absolute top-16 uppercase tracking-[20px] text-white text-xl'
+        initial={{
+            opacity: 0,
+            y: -50,
+        }}
+        whileInView={{
+            opacity: 1,
+            y: 0,
+        }}
+        transition={{
+            duration: 1.2,
+        }}
+        viewport={{once: true}}>
             Contact
-        </h3>
+        </motion.h3>
         <div className='flex flex-col space-y-10'>
             <h4 className='text-4xl font-semibold text-center'>
                 Contact. {" "}

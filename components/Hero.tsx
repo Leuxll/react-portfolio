@@ -27,9 +27,22 @@ export default function Hero({ pageInfo }: Props) {
                 duration: 1,
             }}
             className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden relative'>
-            <h3 className=' absolute top-16 uppercase tracking-[20px] text-white text-xl z-50'>
+            <motion.h3 
+                initial={{
+                    opacity: 0,
+                    y: -50,
+                }}
+                whileInView={{
+                    opacity: 1,
+                    y: 0,
+                }}
+                transition={{
+                    duration: 1.2,
+                }}
+                viewport={{once: true}}
+                className=' absolute top-16 uppercase tracking-[20px] text-white text-xl z-50'>
             Home
-            </h3>
+            </motion.h3>
             <BackgroundShapes />
             <img 
                 src={urlFor(pageInfo?.profilePic).url() || ''}
