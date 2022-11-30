@@ -5,7 +5,7 @@
 @layer components {
 
     .project-card {
-        @apply relative flex flex-col items-center space-y-7 flex-shrink-0 w-[350px] aspect-[1/1.6] border-4 border-solid bg-primary border-purple-500 md:w-[400px] xl:w-[450px] snap-center overflow-hidden;
+        @apply relative flex flex-col items-center space-y-7 flex-shrink-0 w-[250px] aspect-[1/1.6] border-4 border-solid bg-primary border-purple-500 sm:w-[300px] md:w-[400px] xl:w-[450px] snap-center overflow-hidden;
     }
 
     .card-content {
@@ -91,16 +91,19 @@
         position: fixed;
         margin-left:auto;
         margin-right: auto;
-        bottom: 2rem;
+        bottom: 10rem;
         display: flex;
         gap: 0.8rem;
         border-radius: 3rem;
         backdrop-filter: blur(15px);
         align-self: center;
+
+        @apply bottom-8 sm:bottom-12 md:bottom-14;
+        
     }
 
     .nav-icon {
-        @apply p-4 hover:bg-black/[0.2] rounded-full transition-all;
+        @apply p-1 sm:p-2 md:p-3 lg:p-4 hover:bg-black/[0.2] rounded-full transition-all;
 
     }
 

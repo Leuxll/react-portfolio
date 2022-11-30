@@ -24,17 +24,17 @@ export default function ProjectCard({ project }: Props) {
                         duration: 1,
                     }}
                     viewport={{once : true}}
-                    className='text-4xl font-semibold'>
+                    className='text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold'>
                     {project?.title}
                 </motion.h3>
-            <p className='text-white text-center md:text-left '>
+            <p className='text-white md:text-left text-xs md:text-base'>
             {project.summary}
             </p>
             <div className='flex space-x-2 my-2'>
             {project.technologies.map((technology) => (
                         <img
                             key={technology._id}
-                            className='w-8 aspect-square object-contain rounded-md'
+                            className='w-5 md:w-8 aspect-square object-contain rounded-md'
                             src={urlFor(technology?.image).url()}
                             alt={technology?.title}
                         />

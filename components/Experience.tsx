@@ -21,7 +21,7 @@ function Experience({experiences}: Props) {
             }}
             className=' h-screen flex relative overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center'>
             <motion.h3 
-                className='absolute top-16 uppercase tracking-[20px] text-white text-xl z-20 '
+                className='absolute top-16 uppercase tracking-[20px] text-white text-xs md:text-base xl:text-xl z-20 '
                 initial={{
                     opacity: 0,
                     y: -50,

@@ -18,10 +18,10 @@ export default function BackgroundShapes({}: Props) {
             duration: 2.5,
         }}
         className='relative flex justify-center items-center'>
-        <div className='p-1.5 absolute h-[550px] w-[550px] md:h-[500px] md:w-[500px] sm:w-[400px] sm:h-[400px] animate-pulse mt-52 rotate-45 bg-gradient-to-r from-pink-500 to-purple-500 z-2'>
+        <div className='p-1.5 absolute aspect-square w-[300px] md:w-[500px] lg:w-[550px] animate-pulse mt-52 rotate-45 bg-gradient-to-r from-pink-500 to-purple-500 z-2'>
           <div className='h-full w-full bg-primary rotate-90 z-0'/>
         </div>
-        <div className='absolute border-dotted border-4  rounded-full h-[650px] w-[650px] md:h-[600px] md:w-[600px] sm:h-[500px] sm:w-[500px] animate-pulse mt-52'></div>
+        <div className='absolute border-dotted border-4 rounded-full h-[350px] w-[350px] md:h-[550px] md:w-[550px] lg:h-[650px] lg:w-[650px] animate-pulse mt-52'></div>
     </motion.div>
   )
 }

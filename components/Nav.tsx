@@ -6,7 +6,7 @@ type Props = {}
 
 export default function Nav({}: Props) {
   return (
-    <div className=' w-full items-center flex justify-center'>
+    <div className=' w-full flex justify-center'>
         <motion.nav className='nav'
         initial = {{
             opacity: 0,

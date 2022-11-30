@@ -41,17 +41,17 @@ export default function Hero({ pageInfo }: Props) {
                     duration: 1.2,
                 }}
                 viewport={{once: true}}
-                className=' absolute top-16 uppercase tracking-[20px] text-white text-xl z-50'>
+                className='absolute top-16 uppercase tracking-[20px] text-white text-xs md:text-base xl:text-xl z-50'>
             Home
             </motion.h3>
             <BackgroundShapes />
             <img
                 src={urlFor(pageInfo?.profilePic).url() || ''}
                 alt="Picture of Author"
-                className="rounded-full relative h-32 w-32 object-cover mx-auto"/>
-            <div className='z-20'>
-                <h2 className='text-sm uppercase text-transparent pb-2 tracking-[15px] bg-gradient-to-r bg-clip-text from-pink-500 to-purple-500 font-semibold animate-pulse'>{pageInfo?.role}</h2>
-                <h1 className=' text-5xl lg:text-6xl font-semibold scroll-px-10'>
+                className="rounded-full relative h-32 w-32 object-cover mx-auto "/>
+            <div className='z-20 w-screen'>
+                <h2 className='text-xs md:text-md lg:text-lg tracking-[10px] md:tracking-[15px] uppercase text-transparent pb-2 bg-gradient-to-r bg-clip-text from-pink-500 to-purple-500 font-semibold animate-pulse'>{pageInfo?.role}</h2>
+                <h1 className=' text-2xl md:text-3xl lg:text-6xl font-semibold'>
                     <span className='mr-3'>{text}</span>
                     <Cursor cursorColor='ffffff'/>
                 </h1>
