@@ -26,7 +26,7 @@ export default function ExperienceCard( {experience}: Props) {
                     y: 0,
                 }}
                 viewport={{once: true}}
-                className='w-32 h-32 xl:w-[200px] xl:h-[200px] object-center rounded-full'
+                className='w-32 xl:w-[200px] aspect-square object-center rounded-lg object-contain'
                 src={urlFor(experience?.companyImage).url()} />
             <div className='px-10 md:px-10'>
                 <h4 className=' text-4xl font-light'>{experience?.jobTitle}</h4>
@@ -35,7 +35,7 @@ export default function ExperienceCard( {experience}: Props) {
                     {experience.technologies.map((technology) => (
                         <img
                             key={technology._id}
-                            className='w-8 h-8 rounded-full'
+                            className='w-8 aspect-square object-contain rounded-md'
                             src={urlFor(technology?.image).url()}
                             alt={technology?.title}
                         />
@@ -45,7 +45,7 @@ export default function ExperienceCard( {experience}: Props) {
                     {new Date(experience.dateStarted).toDateString()} - {experience.isCurrentlyWorkingHere ? 'Present' : new Date(experience.dateEnded).toDateString()}
                 </p>
 
-                <ul className='list-disc space-y-4 ml-5 text-lg'>
+                <ul className='list-item space-y-4 ml-5 text-lg h-80 overflow-y-scroll scrollbar'>
                     {experience.points.map((point, i) => (
                         <li key={i}>{point}</li>
                     ))}
