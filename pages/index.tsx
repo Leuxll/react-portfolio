@@ -27,7 +27,7 @@ export default function Home({ pageInfo, skills, experiences, projects, socials 
   return (
     <div className="bg-primary text-white h-screen snap-y snap-mandatory overflow-x-hidden overflow-y-scroll z-0 scrollbar">
       <Head>
-        <title>Yue Fung's Portfolio</title>
+        <title>{pageInfo?.name} - Portfolio</title>
       </Head>
 
       {/* Hero */}
