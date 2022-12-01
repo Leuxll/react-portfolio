@@ -21,7 +21,7 @@ export default function Projects({ projects }: Props) {
       }}
       className='h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0'>
       <motion.h3 
-      className='absolute top-16 uppercase tracking-[20px] text-white text-xs md:text-base xl:text-xl'
+      className='relative py-8 uppercase tracking-[20px] text-white text-xs md:text-base xl:text-xl'
       initial={{
         opacity: 0,
         y: -50,

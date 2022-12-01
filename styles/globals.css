@@ -54,7 +54,7 @@
     }
     
     .contactInput {
-        @apply outline-none bg-secondary rounded-md border-b py-4 px-6 text-white placeholder-gray-500 transition-all focus:border-purple-500 hover:border-pink-500
+        @apply outline-none bg-secondary rounded-md border-b py-4 px-6 text-white placeholder-gray-500 transition-all focus:border-purple-500 hover:border-pink-500 w-full
     }
 
     .scrollbar::-webkit-scrollbar {

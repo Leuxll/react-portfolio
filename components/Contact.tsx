@@ -28,7 +28,7 @@ export default function Contact({}: Props) {
   return (
     <div className=' h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
         <motion.h3 
-        className='absolute top-16 uppercase tracking-[20px] text-white text-xs md:text-base xl:text-xl'
+        className='relative py-8 uppercase tracking-[20px] text-white text-xs md:text-base xl:text-xl'
         initial={{
             opacity: 0,
             y: -50,
@@ -51,26 +51,28 @@ export default function Contact({}: Props) {
             <div>
                 <div className='flex items-center space-x-5 justify-center'>
                     <PhoneIcon className='h-7 w-7 text-pink-500 animate-pulse'/>
-                    <p className='text-white text-2xl font-semibold'>+1 (437) 993-3058</p>
+                    <p className='text-white text-base md:text-xl lg:text-2xl font-semibold'>+1 (437) 993-3058</p>
                 </div>
                 <div className='flex items-center space-x-5 justify-center'>
                     <EnvelopeIcon className='h-7 w-7 text-pink-500 animate-pulse'/>
-                    <p className='text-white text-2xl font-semibold'>yuefungalt@gmail.com</p>
+                    <p className='text-white text-base md:text-xl lg:text-2xl font-semibold'>yuefungalt@gmail.com</p>
                 </div>
             </div>
             
             {/* Connected the above submit handlers with the form itself*/}
             <form 
                 onSubmit={handleSubmit(onSubmit)}
-                className=' flex flex-col space-y-2 w-fit mx-auto'>
-                <div className='flex space-x-2'>
-                    {/* ... means spread */}
-                    <input {...register('name')} className="contactInput" type="text" placeholder='Name'/>
-                    <input {...register('email')} className="contactInput" type="email" placeholder='Email'/>
+                className=' flex flex-col space-y-2'>
+                <div className='flex flex-col space-y-3 relative justify-center width-[300px] scale-100'>
+                    <div className='flex space-x-2'>
+                        {/* ... means spread */}
+                        <input {...register('name')} className="contactInput" type="text" placeholder='Name'/>
+                        <input {...register('email')} className="contactInput" type="email" placeholder='Email'/>
+                    </div>
+                        <input {...register('subject')} className="contactInput" type="text" placeholder='Subject'/>
+                        <textarea {...register('message')} className='contactInput'placeholder='Message'/>
+                    <button type='submit' className='bg-gradient-to-r py-5 px-10 rounded-md text-white font-bold text-lg from-pink-500 to-purple-500 animate-pulse'>Submit</button>
                 </div>
-                    <input {...register('subject')} className="contactInput" type="text" placeholder='Subject'/>
-                    <textarea {...register('message')} className='contactInput'placeholder='Message'/>
-                <button type='submit' className='bg-gradient-to-r py-5 px-10 rounded-md text-white font-bold text-lg from-pink-500 to-purple-500 animate-pulse'>Submit</button>
             </form>
 
         </div>
